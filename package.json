@@ -1,0 +1,23 @@
+{
+  "name": "Reservation-waitlist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jdusang1/Reservation-waitlist.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jdusang1/Reservation-waitlist/issues"
+  },
+  "homepage": "https://github.com/Jdusang1/Reservation-waitlist#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
