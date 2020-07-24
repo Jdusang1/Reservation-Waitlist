@@ -9,21 +9,8 @@ app.use(express.json());
 
 app.use(express.static("public"))
 
-const tables = [{
-    // name: "",
-    // phonenumber: "",
-    // email: "",
-    // uniqueId: "",
-
-
-}];
-const waitlist = [{
-    // name: "",
-    // phonenumber: "",
-    // email: "",
-    // uniqueId: "",
-
-}];
+const tables = [];
+const waitlist = [];
 
 app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "index.html"));
@@ -48,11 +35,16 @@ app.get("/api/waitlist", function (req, res) {
 app.post("/api/reservations", function (req, res) {
     const newReservation = req.body;
 
-    if (tables.length <= 5) {
+    if (tables.length < 5) {
         tables.push(newReservation)
+        res.json(true);
     } else {
         waitlist.push(newReservation)
+        res.json(false);
     }
+    console.log("save table")
+
+
 });
 
 app.listen(PORT, function () {
